@@ -2,7 +2,7 @@
 
 <p>
   <strong>Message:</strong>
-  <%= auto_link (@message.message) %>  
+  <%= formatText(auto_link( message.message, :link => :urls)) %>  
   <%= @message.created_at %>  
 </p>
 

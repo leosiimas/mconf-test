@@ -1,6 +1,6 @@
 
 <tr>
-    <td><%= auto_link( message.message, :link => :urls) %></td>
+    <td><%= formatText(auto_link( message.message, :link => :urls)) %></td>
     <td><%= message.created_at %></td>        
     <td><%= link_to 'Show', message %></td>
     <td><%= link_to 'Edit', edit_message_path(message) %></td>
