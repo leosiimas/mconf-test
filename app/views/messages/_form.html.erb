@@ -13,10 +13,13 @@
 
   <div class="field">
     <%= form.label :message %>
-    <%= form.text_area :message %>
+    <%= form.text_area :message, id: 'inputField' %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
+
+<%= javascript_include_tag "customText" %>
