@@ -2,7 +2,8 @@
 
 <p>
   <strong>Message:</strong>
-  <%= @message.message %>
+  <%= @message.message %>  
+  <%= @message.created_at %>  
 </p>
 
 <%= link_to 'Edit', edit_message_path(@message) %> |

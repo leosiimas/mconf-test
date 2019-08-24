@@ -4,17 +4,13 @@ class MessagesController < ApplicationController
   # GET /messages
   # GET /messages.json
   def index
+    @message = Message.new
     @messages = Message.all
   end
 
   # GET /messages/1
   # GET /messages/1.json
   def show
-  end
-
-  # GET /messages/new
-  def new
-    @message = Message.new
   end
 
   # GET /messages/1/edit
@@ -28,6 +24,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
+        format.js
         format.html { redirect_to @message, notice: 'Message was successfully created.' }
         format.json { render :show, status: :created, location: @message }
       else
@@ -56,6 +53,7 @@ class MessagesController < ApplicationController
   def destroy
     @message.destroy
     respond_to do |format|
+      format.js
       format.html { redirect_to messages_url, notice: 'Message was successfully destroyed.' }
       format.json { head :no_content }
     end
