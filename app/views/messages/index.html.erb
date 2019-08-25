@@ -1,21 +1,13 @@
-<p id="notice"><%= notice %></p>
+<div class="create">
+    <div class="title">
+        <%= image_tag 'message-icon' %>
+        <h1>Mensagens</h1>
+    </div>
+    <%= render 'form', message: @message %>
+</div>
 
-<h1>Messages</h1>
-
-
-<%= render 'form', message: @message %>
-
-<table id="messages">
-  <thead>
-    <tr>
-      <th>Message</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div id="messages">
     <%= render @messages %>
-  </tbody>
-</table>
+</div>
 
 <br>

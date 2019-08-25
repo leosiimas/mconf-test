@@ -1,8 +1,12 @@
 
-<tr>
-    <td><%= formatText(auto_link( message.message, :link => :urls)) %></td>
-    <td><%= message.created_at %></td>        
-    <td><%= link_to 'Show', message %></td>
-    <td><%= link_to 'Edit', edit_message_path(message) %></td>
-    <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' , remote: true}, class: "delete" %></td>
-</tr>
+<div class="message">
+    <div class="top">
+        <span><%= message.created_at.strftime("%A, %B %d, %Y at %H:%M")  %> :</span>     
+        <%= link_to '<i class="fa fa-times"></i>'.html_safe, message, method: :delete, data: { confirm: 'Tem certeza que deseja apagar?' , remote: true}, class: "delete" %>
+        <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_message_path(message) %>        
+        <%= link_to '<i class="fa fa-eye"></i>'.html_safe, message %>   
+    </div>
+    <div class="ml-3">
+        <span><%= formatText(auto_link( message.message, :link => :urls)) %></span>    
+    </div>
+</div>

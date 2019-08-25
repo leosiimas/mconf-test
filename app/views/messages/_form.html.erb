@@ -11,15 +11,15 @@
     </div>
   <% end %>
 
+  
   <div class="field">
-    <%= form.label :message %>
-    <%= form.text_area :message, id: 'inputField' %>
+    <%= form.text_area :message, id:'inputField', placeholder:'Escreva Uma Mensagem...' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-dark button" %>
   </div>
-<% end %>
 
+<% end %>
 
 <%= javascript_include_tag "customText" %>

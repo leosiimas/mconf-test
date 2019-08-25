@@ -9,12 +9,12 @@ $('#inputField').keyup(function() {
 
         var colors  = ['#481E9D', '#8D74C0',  '#CA4B57', '#2B2D42', '#1C77C3', '#81B29A', '#E98039'];
         var i = Math.floor(Math.random() * 7);
-        $("body").css("background-color", colors[i]).css("color", 'white');
+        $("body").css("background-color", colors[i]);
         count = 1;
 
     }else if(result < 0){
 
-        $("body").css("background-color", "").css("color", '');;
+        $("body").css("background-color", "");
         count = 0;
 
     }

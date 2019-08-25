@@ -9,7 +9,7 @@ module MessagesHelper
         if uperText.include? "MCONF"
             index = uperText.index("MCONF")
             textEdited = "#{text[0...index]}<strong><font color='#{colors[rand 7]}'>Mconf</font></strong>"
-            return "#{textEdited}#{formatText(text[index+5 ... text.length])}".html_safe            
+            return "#{textEdited}#{formatText(text[(index+5)...text.length])}".html_safe            
         end      
         
         return text
