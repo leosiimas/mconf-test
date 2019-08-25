@@ -1,3 +1,9 @@
 $('#messages').append("<%= j render @message %>").fadeIn()
 $('textarea').val('')
 $("body").css("background-color", "");
+
+$('#notice').append(`
+    <div class="alert alert-success" role="alert">
+        Mensagem Criada com <strong>Sucesso</strong>!
+    </div>
+`).fadeIn().fadeOut(3000)

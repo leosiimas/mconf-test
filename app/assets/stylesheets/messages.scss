@@ -105,7 +105,7 @@ body{
     box-shadow: -9px 15px 23px -5px rgba(0,0,0,0.66);
 }
 
-.show{
+.visualize{
     width: 60%;
     margin-top: 30px;
     height: 500px;
@@ -138,4 +138,8 @@ body{
 .title{
     color: black;
     margin-top: 30px;
+}
+
+.alert{
+    position: absolute;
 }
